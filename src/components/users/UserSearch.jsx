@@ -3,7 +3,7 @@ import GithubContext from '../../context/github/GithubContext'
 import AlertContext from '../../context/alert/AlertContext'
 import { searchUsers } from '../../context/github/GithubActions'
 
-function UserSearch() {
+function  UserSearch() {
   const [text, setText] = useState('')
 
   const { users, dispatch } = useContext(GithubContext)
@@ -28,8 +28,11 @@ function UserSearch() {
   return (
     <div className='grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8'>
       <div>
+      <h1 class="mt-2 mb-6 text-3xl font-bold tracking-tight text-white-900 sm:text-4xl">Search by Github Handle</h1>
         <form onSubmit={handleSubmit}>
+          
           <div className='form-control'>
+          
             <div className='relative'>
               <input
                 type='text'
